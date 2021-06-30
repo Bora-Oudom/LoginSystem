@@ -8,8 +8,3 @@
 
 </div>
 
-<?php 
-
-include __DIR__.'path_to_filename';
-
-?>
