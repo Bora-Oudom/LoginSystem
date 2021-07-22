@@ -1,13 +1,11 @@
 <?php
    require APPROOT . '/views/elements/head.php';
 ?>
-
-<div class="navbar">
-    <?php
-       require APPROOT . '/views/elements/navigation.php';
-    ?>
-</div>
-
+    <div class="navbar dark" >
+        <?php 
+        require APPROOT . '/views/elements/navigation.php';
+        ?>
+    </div> 
 <div class="container-login">
     <div class="wrapper-login">
         <h2>Signup</h2>
@@ -37,9 +35,18 @@
                 <?php echo $data['repasswordError']; ?>
             </span>
 
-            <button id="submit" type="submit" value="submit">Submit</button>
+            <button 
+            id="submit" 
+            type="submit"
+            value="submit"
+            class="btn btn-dark">Submit</button>
 
             <p class="options">Already have account.<a href="<?php echo URLROOT; ?>/users/login">login</a></p>
         </form>
     </div>
 </div>
+
+
+<?php 
+   require APPROOT . '/views/elements/footer.php';
+?>

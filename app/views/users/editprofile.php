@@ -5,35 +5,28 @@
         <?php 
         require APPROOT . '/views/elements/navigation.php';
         ?>
-    </div> 
+   </div> 
 <div class="container-login">
     <div class="wrapper-login">
-        <h2>Login</h2>
+        <h2>Edit your Profile</h2>
 
-        <form action="<?php echo URLROOT; ?>/users/login" method ="POST">
-            <input 
-            type="text" 
-            placeholder="Username" 
-            name="username">
+        <form action="<?php echo URLROOT; ?>/users/editprofile" method ="POST">
+            <input type="text"  placeholder="New Username" name="username">
             <span class="invalidFeedback">
                 <?php echo $data['usernameError']; ?>
             </span>
 
-            <input 
-            type="password" 
-            placeholder="Password" 
-            name="password">
+            <input type="email" placeholder="New Email" name="email">
             <span class="invalidFeedback">
-                <?php echo $data['passwordError']; ?>
+                <?php echo $data['emailError']; ?>
             </span>
 
             <button 
             id="submit" 
             type="submit"
-            value="submit"
+            value="delete"
             class="btn btn-dark">Submit</button>
 
-            <p class="options">Not registered yet? <a href="<?php echo URLROOT; ?>/users/signup">Create an account!</a></p>
         </form>
     </div>
 </div>
